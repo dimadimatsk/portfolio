@@ -107,9 +107,7 @@ body {
 /* header start */
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: absolute;
   width: 100%;
 }
 
@@ -212,6 +210,7 @@ body {
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: cover;
+  margin-bottom: 100px;
 }
 
 .hero-container {
@@ -220,7 +219,7 @@ body {
 
 .hero-title {
   padding-top: 250px;
-  font-family: Merriweather;
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: bold;
   font-size: 60px;
@@ -230,7 +229,7 @@ body {
 }
 
 .hero-subtitle {
-  font-family: Inter;
+  font-family: 'Inter';
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -260,3 +259,104 @@ body {
 .golden {
   background-color: var(--gold);
 }
+
+.skills {
+  margin-bottom: 100px;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-title-container {
+  width: 50%;
+  overflow-x: hidden;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  position: relative;
+  color: var(--gold);
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 200%;
+  text-align: center;
+}
+
+.section-title::before,
+.section-title::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  border: 1px solid var(--gold);
+  width: 40%;
+}
+
+.section-title::before {
+  top: 50%;
+  left: 0px;
+}
+.section-title::after {
+  right: 0px;
+  top: 50%;
+}
+
+.skills-items {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.skill-item {
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: 320px;
+  height: 240px;
+  padding: 0px 20px 8px;
+}
+
+.skill-title {
+  margin-top: 100px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 200%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skill-subtitle {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 200%;
+  text-align: center;
+}
+
+.skill-item:nth-child(1) {
+  background-image: url('../assets/svg/camera.svg');
+  background-size: 62px 50px;
+}
+
+.skill-item:nth-child(2) {
+  background-image: url('../assets/svg/video.svg');
+  background-size: 62px 50px;
+}
+
+.skill-item:nth-child(3) {
+  background-image: url('../assets/svg/image.svg');
+  background-size: 62px 50px;
+}
+
+.skill-item:nth-child(4) {
+  background-image: url('../assets/svg/mic.svg');
+  background-size: 62px 50px;
+}
+
