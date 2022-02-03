@@ -9,39 +9,41 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header-container">
-        <div class="header-logo">
-          <a href="/" class="header-logo-link">
-            <div class="logo inter-icon"></div>
-          </a>
-        </div>
+      <div class="container">
+        <div class="header-container">
+          <div class="header-logo">
+            <a href="/" class="header-logo-link">
+              <div class="logo inter-icon"></div>
+            </a>
+          </div>
 
-        <nav class="nav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#video">Video</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#price">Price</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contacts">Contacts</a>
-            </li>
-          </ul>
-        </nav>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#video">Video</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#price">Price</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </nav>
 
-        <div class="switch-lng">
-          <ul class="lng-list">
-            <li class="lng-item">en</li>
-            <li class="lng-item">/</li>
-            <li class="lng-item">ru</li>
-          </ul>
+          <div class="switch-lng">
+            <ul class="lng-list">
+              <li class="lng-item">en</li>
+              <li class="lng-item">/</li>
+              <li class="lng-item">ru</li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -49,14 +51,16 @@
     <main class="main">
       <!--hero section-->
 
-      <section class="section hero" id="hero">
-        <div class="container hero-container">
-          <h1 class="hero-title">Alexa Rise</h1>
-          <p class="hero-subtitle">
-            Save sincere emotions, romantic feelings and happy moments of life
-            together with professional photographer Alexa Rise
-          </p>
-          <button class="btn golden">Hire me</button>
+      <section class="section" id="hero">
+        <div class="container-full hero">
+          <div class="hero-container">
+            <h1 class="hero-title">Alexa Rise</h1>
+            <p class="hero-subtitle">
+              Save sincere emotions, romantic feelings and happy moments of life
+              together with professional photographer Alexa Rise
+            </p>
+            <button class="btn golden">Hire me</button>
+          </div>
         </div>
       </section>
 
@@ -140,7 +144,7 @@
 
       <!--price section-->
 
-      <section class="section price">
+      <section class="section price" id="price">
         <div class="container price-container">
           <div class="title-container">
             <h2 class="section-title">Price</h2>
@@ -179,7 +183,42 @@
           </div>
         </div>
       </section>
+
+      <!--contact section-->
+
+      <section class="section contacts" id="contacts">
+        <div class="container-full contacts-container">
+          <div class="contact-form">
+            <h2 class="contacts-title">Contact me</h2>
+            <form action="" method="post" class="contacts-form">
+              <input type="email" name="email-address" placeholder="E-mail" />
+              <input type="tel" name="phone-number" placeholder="Phone" />
+              <textarea name="comment" placeholder="Message"></textarea>
+              <button class="btn golden">Send message</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!--footer-->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-container">
+          <div class="github-container">
+            <span>©</span><span>2022</span><span>github</span>
+          </div>
+          <a href="" class="school-link">Rolling Scopes School</a>
+          <ul class="social-container">
+            <li class="social inter-icon"></li>
+            <li class="social inter-icon"></li>
+            <li class="social inter-icon"></li>
+            <li class="social inter-icon"></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="./index.js"></script>
 </html>
