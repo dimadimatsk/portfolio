@@ -180,7 +180,7 @@ body {
   height: 50px;
 }
 
-.logo:hover {
+.inter-icon:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
 }
@@ -210,7 +210,6 @@ body {
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: cover;
-  margin-bottom: 100px;
 }
 
 .hero-container {
@@ -239,7 +238,7 @@ body {
 }
 
 .btn {
-  margin: 10px 0px;
+  /* margin: 10px 0px; */
   padding: 8px 70px;
   border: 0;
   cursor: pointer;
@@ -260,24 +259,18 @@ body {
   background-color: var(--gold);
 }
 
-.skills {
-  margin-bottom: 100px;
-}
-
 .skills-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.skills-title-container {
+.title-container {
   width: 50%;
-  overflow-x: hidden;
   margin-bottom: 60px;
 }
 
 .section-title {
-  position: relative;
   color: var(--gold);
   font-family: 'Merriweather';
   font-style: normal;
@@ -285,24 +278,26 @@ body {
   font-size: 40px;
   line-height: 200%;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .section-title::before,
 .section-title::after {
   content: '';
   display: inline-block;
-  position: absolute;
+  position: relative;
   border: 1px solid var(--gold);
-  width: 40%;
+  width: 50%;
+  vertical-align: middle;
 }
 
 .section-title::before {
-  top: 50%;
-  left: 0px;
+  right: 20px;
+  margin-left: -50%;
 }
 .section-title::after {
-  right: 0px;
-  top: 50%;
+  left: 20px;
+  margin-right: -50%;
 }
 
 .skills-items {
@@ -360,3 +355,146 @@ body {
   background-size: 62px 50px;
 }
 
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons-container {
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 60px;
+}
+
+.black {
+  background-color: var(--bg-color);
+  color: var(--gold);
+  border: 2px solid var(--gold);
+}
+
+.photo-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.photo {
+  width: 450px;
+  height: 560px;
+}
+
+.photo:nth-child(1),
+.photo:nth-child(2),
+.photo:nth-child(3),
+.photo:nth-child(4),
+.photo:nth-child(5),
+.photo:nth-child(6) {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.photo:nth-child(1) {
+  background-image: url('../assets/img/portfolio-img-1.jpg');
+}
+
+.photo:nth-child(2) {
+  background-image: url('../assets/img/portfolio-img-2.jpg');
+}
+.photo:nth-child(3) {
+  background-image: url('../assets/img/portfolio-img-3.jpg');
+  background-position: -4px 0px;
+  background-size: 458px;
+}
+.photo:nth-child(4) {
+  background-image: url('../assets/img/portfolio-img-4.jpg');
+}
+.photo:nth-child(5) {
+  background-image: url('../assets/img/portfolio-img-5.jpg');
+}
+.photo:nth-child(6) {
+  background-image: url('../assets/img/portfolio-img-6.jpg');
+}
+
+.section {
+  margin-bottom: 100px;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-player {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.player-button {
+  position: absolute;
+  background-image: url('../assets/svg/play_hover.svg');
+  width: 130px;
+  height: 130px;
+  transition: 0.3s;
+  top: 288px;
+  left: 636px;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.card {
+  width: 450px;
+  height: 505px;
+  border: 1px solid var(--gold);
+  padding: 43px;
+  text-align: center;
+}
+
+.card-title {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 200%;
+  margin-bottom: 20px;
+}
+
+.card-price {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 200%;
+  text-align: center;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.card-about {
+  display: block;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 200%;
+  text-align: center;
+}
+
+.card-about:nth-of-type(5) {
+  margin-bottom: 40px;
+}
