@@ -158,7 +158,7 @@ ul {
 }
 
 .nav-item {
-  margin-right: auto;
+  margin-left: 30px;
 }
 
 .lng-list {
@@ -199,11 +199,11 @@ ul {
 /* hero start */
 
 .hero {
-  height: 100vh;
+  height: 97vh;
   background: url('../assets/img/header-bg.jpg');
   background-repeat: no-repeat;
   background-position: center 0;
-  background-size: cover;
+  background-size: auto 910px;
 }
 
 .hero-container {
@@ -297,6 +297,7 @@ ul {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 }
 
 .skill-item {
@@ -530,7 +531,7 @@ ul {
   text-align: center;
   overflow-x: hidden;
   margin-bottom: 40px;
-  margin-top: 60px;
+  margin-top: 63px;
 }
 
 ::placeholder {
