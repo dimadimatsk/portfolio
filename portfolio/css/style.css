@@ -65,6 +65,8 @@
   --bg-color: #000000;
   --gold: #bdae82;
   --white: #ffffff;
+  --font1: 18px;
+  --font2: 20px;
 }
 
 html {
@@ -85,13 +87,32 @@ body {
   flex-direction: column;
   justify-content: space-between;
   font-family: 'Inter';
-  font-size: 18px;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.2;
   min-height: 100vh;
   color: var(--white);
   background: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 250%;
+  transition: 0.3s;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: var(--gold);
+}
+
+ul {
+  list-style: none;
 }
 
 .container {
@@ -106,6 +127,10 @@ body {
   padding: 0;
 }
 
+.section {
+  margin-bottom: 100px;
+}
+
 /* header start */
 
 .header {
@@ -114,7 +139,6 @@ body {
 }
 
 .header-container {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -130,8 +154,6 @@ body {
 .nav-list {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  max-width: 100%;
   width: 500px;
 }
 
@@ -139,25 +161,18 @@ body {
   margin-right: auto;
 }
 
-.nav-link {
-  text-decoration: none;
-  color: var(--white);
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 50px;
-  transition: 0.3s;
-}
-
 .lng-list {
   display: flex;
   flex-direction: row;
   width: 70px;
-  max-width: 100%;
-  list-style: none;
 }
 
 .lng-item {
   margin-right: auto;
+}
+
+.lng-item:first-child {
+  color: var(--gold);
 }
 
 .lng-item:last-child {
@@ -179,21 +194,6 @@ body {
   cursor: pointer;
 }
 
-.nav-link {
-  text-decoration: none;
-  color: var(--white);
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 50px;
-  transition: 0.3s;
-}
-
-.nav-link:hover,
-.nav-link:focus,
-.nav-link:active {
-  color: var(--gold);
-}
-
 /* header end */
 
 /* hero start */
@@ -207,7 +207,7 @@ body {
 }
 
 .hero-container {
-  margin-left: 60px;
+  margin-left: 80px;
   padding-top: 250px;
 }
 
@@ -222,21 +222,16 @@ body {
 }
 
 .hero-subtitle {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 40px;
+  line-height: 200%;
   max-width: 470px;
   margin-bottom: 25px;
 }
 
 .btn {
-  /* margin: 10px 0px; */
   border: 0;
   cursor: pointer;
-  font-family: inherit;
-  font-size: 20px;
+  line-height: 200%;
+  font-size: var(--font2);
   width: 220px;
   height: 55px;
   color: var(--bg-color);
@@ -251,6 +246,10 @@ body {
 .golden {
   background-color: var(--gold);
 }
+
+/* hero end */
+
+/* skills start */
 
 .skills-container {
   display: flex;
@@ -313,17 +312,14 @@ body {
   font-family: 'Inter';
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
+  font-size: var(--font2);
   line-height: 200%;
   text-align: center;
   margin-bottom: 20px;
 }
 
 .skill-subtitle {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
+  font-size: var(--font1);
   line-height: 200%;
   text-align: center;
 }
@@ -347,6 +343,10 @@ body {
   background-image: url('../assets/svg/mic.svg');
   background-size: 62px 50px;
 }
+
+/* skills end */
+
+/* portfolio start */
 
 .portfolio-container {
   display: flex;
@@ -410,9 +410,9 @@ body {
   background-image: url('../assets/img/portfolio-img-6.jpg');
 }
 
-.section {
-  margin-bottom: 100px;
-}
+/* portfolio end */
+
+/* video start */
 
 .video-container {
   display: flex;
@@ -438,6 +438,10 @@ body {
   cursor: pointer;
 }
 
+/* video end */
+
+/* price start */
+
 .price-container {
   display: flex;
   flex-direction: column;
@@ -461,7 +465,6 @@ body {
 
 .card-title {
   font-family: 'Merriweather';
-  font-style: normal;
   font-weight: bold;
   font-size: 28px;
   line-height: 200%;
@@ -470,7 +473,6 @@ body {
 
 .card-price {
   font-family: 'Merriweather';
-  font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 200%;
@@ -481,10 +483,7 @@ body {
 
 .card-about {
   display: block;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
+  font-size: var(--font1);
   line-height: 200%;
   text-align: center;
 }
@@ -493,13 +492,15 @@ body {
   margin-bottom: 40px;
 }
 
+/* price end */
+
+/* contacts start */
+
 .contacts-container {
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-end;
-
   background: url('../assets/img/contacts.jpg');
   height: 700px;
   background-position: center center;
@@ -511,7 +512,7 @@ body {
   flex-direction: column;
 }
 
-.contact-form {
+.form-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -523,7 +524,6 @@ body {
 .contacts-title {
   color: var(--gold);
   font-family: 'Merriweather';
-  font-style: normal;
   font-weight: bold;
   font-size: 40px;
   line-height: 200%;
@@ -547,9 +547,7 @@ input {
   border: 2px solid var(--gold);
   padding-left: 20px;
   font-family: 'Inter';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
+  font-size: var(--font2);
   line-height: 200%;
   color: var(--gold);
 }
@@ -561,9 +559,7 @@ textarea {
   border: 2px solid var(--gold);
   padding-left: 20px;
   font-family: 'Inter';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
+  font-size: var(--font2);
   line-height: 200%;
   margin-bottom: 30px;
   resize: none;
@@ -574,8 +570,10 @@ textarea {
   margin-bottom: 0px;
 }
 
-.footer {
-}
+/* contacts end */
+
+/* footer start */
+
 .footer-container {
   margin: 50px 0px;
   display: flex;
@@ -610,19 +608,4 @@ textarea {
   font-size: 20px;
   font-weight: normal;
   line-height: 250%;
-}
-
-.school-link {
-  text-decoration: none;
-  color: var(--white);
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 250%;
-  transition: 0.3s;
-}
-
-.school-link:hover,
-.school-link:focus,
-.school-link:active {
-  color: var(--gold);
 }
