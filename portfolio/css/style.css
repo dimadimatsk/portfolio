@@ -131,8 +131,15 @@ a:active {
   color: var(--gold);
 }
 
-button {
+.btn {
   font-family: 'Inter';
+  width: 220px;
+  padding: 6px 0px;
+  line-height: 40px;
+  font-weight: normal;
+  font-family: 'Inter';
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 /* header start */
@@ -159,7 +166,7 @@ button {
   flex-wrap: wrap;
 }
 
-.nav__item {
+.nav__list-item {
   margin-right: 30px;
 }
 
@@ -212,15 +219,9 @@ button {
 }
 
 .hero__btn {
-  padding: 8px 75px;
-  line-height: 40px;
-  font-weight: normal;
-  font-family: 'Inter';
   font-size: var(--font2);
   color: var(--bg-color);
-  transition: 0.3s;
   border: 0;
-  cursor: pointer;
 }
 
 .hero__btn:hover,
@@ -359,7 +360,6 @@ img {
 .portfolio__button {
   background-color: var(--bg-color);
   font-family: 'Inter';
-  padding: 8px 75px;
   line-height: 200%;
   font-weight: normal;
   font-size: var(--font2);
@@ -428,7 +428,6 @@ img {
 
 .price__btn {
   background-color: var(--gold);
-  padding: 5px 39px;
   line-height: 200%;
   font-weight: 500;
   font-size: var(--font2);
@@ -528,7 +527,6 @@ textarea {
 
 .submit-form__btn {
   background-color: var(--bg-color);
-  padding: 8px 75px;
   line-height: 200%;
   font-weight: 500;
   font-size: var(--font2);
