@@ -18,4 +18,3 @@ function closeMenu() {
 }
 
 navItems.forEach((elem) => elem.addEventListener('click', closeMenu));
-document.addEventListener('click', closeMenu);
