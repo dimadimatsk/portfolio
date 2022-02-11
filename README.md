@@ -1,1 +1,1 @@
-https://dimadimatsk.github.io/portfolio/
+https://dimadimatsk.github.io/portfolio/portfolio
