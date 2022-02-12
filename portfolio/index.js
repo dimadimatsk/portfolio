@@ -22,3 +22,22 @@ function closeMenu(e) {
 }
 
 nav.addEventListener('click', closeMenu);
+
+// button gallery change
+
+const portfolioButtons = document.querySelector(
+  '.portfolio__buttons-container'
+);
+
+const portfolioImages = document.querySelectorAll('.portfolio__photo');
+
+function changeImage(e) {
+  if (e.target.classList.contains('portfolio__button')) {
+    portfolioImages.forEach(
+      (item, index) =>
+        (item.src = `./assets/img/${e.target.dataset.season}/${index + 1}.jpg`)
+    );
+  }
+}
+
+portfolioButtons.addEventListener('click', changeImage);
