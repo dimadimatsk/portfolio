@@ -41,3 +41,17 @@ function changeImage(e) {
 }
 
 portfolioButtons.addEventListener('click', changeImage);
+
+// cache image function
+
+function preloadImages() {
+  const seasons = ['winter', 'spring', 'summer', 'autumn'];
+  for (let season of seasons) {
+    for (let i = 1; i <= 6; i++) {
+      const img = new Image();
+      img.src = `./assets/img/${season}/${i}.jpg`;
+    }
+  }
+}
+
+preloadImages();
