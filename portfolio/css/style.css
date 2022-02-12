@@ -348,7 +348,7 @@ img {
   position: absolute;
   top: calc(50% - 65px);
   left: calc(50% - 65px);
-  background: url('/assets/svg/play_hover.svg') no-repeat;
+  background: url('../assets/svg/play_hover.svg') no-repeat;
   width: 130px;
   height: 130px;
 }
@@ -721,7 +721,7 @@ textarea {
     position: absolute;
     top: calc(50% - 38px);
     left: calc(50% - 38px);
-    background: url('/assets/svg/play-btn.svg') no-repeat;
+    background: url('../assets/svg/play-btn.svg') no-repeat;
     width: 75px;
     height: 75px;
   }

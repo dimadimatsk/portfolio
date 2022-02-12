@@ -1,3 +1,5 @@
+// burger menu
+
 const burgerBtn = document.querySelector('.burger');
 const nav = document.querySelector('.header__nav');
 const navList = document.querySelector('.nav__list');
@@ -11,10 +13,12 @@ function openMenu() {
 
 burgerBtn.addEventListener('click', openMenu);
 
-function closeMenu() {
-  burgerBtn.classList.remove('active');
-  nav.classList.remove('active');
-  navList.classList.remove('active');
+function closeMenu(e) {
+  if (e.target.classList.contains('nav__list-link')) {
+    burgerBtn.classList.remove('active');
+    nav.classList.remove('active');
+    navList.classList.remove('active');
+  }
 }
 
-navItems.forEach((elem) => elem.addEventListener('click', closeMenu));
+nav.addEventListener('click', closeMenu);
