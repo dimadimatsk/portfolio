@@ -177,6 +177,7 @@ a:active {
 
 .language__item {
   margin-right: 9px;
+  cursor: pointer;
 }
 
 .language__item.active-btn {
