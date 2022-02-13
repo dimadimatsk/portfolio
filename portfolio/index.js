@@ -42,6 +42,8 @@ const i18Obj = {
     order: 'Order shooting',
     'contact-me': 'Contact me',
     'send-message': 'Send message',
+    message: 'Message',
+    phone: 'Phone',
   },
   ru: {
     skills: 'Навыки',
@@ -86,6 +88,8 @@ const i18Obj = {
     order: 'Заказать съемку',
     'contact-me': 'Свяжитесь со мной',
     'send-message': 'Отправить',
+    message: 'Сообщение',
+    phone: 'Телефон',
   },
 };
 
@@ -176,6 +180,11 @@ languageBar.addEventListener('click', () => getTranslate(currentLang));
 function getTranslate(lang) {
   const translateItems = document.querySelectorAll('[data-i18n]');
   for (let item of translateItems) {
-    item.textContent = i18Obj[lang][item.dataset['i18n']];
+    if (item.placeholder) {
+      item.placeholder = i18Obj[lang][item.dataset['i18n']];
+      item.textContent = '';
+    } else {
+      item.textContent = i18Obj[lang][item.dataset['i18n']];
+    }
   }
 }

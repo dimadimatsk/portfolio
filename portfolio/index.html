@@ -84,7 +84,7 @@
 
       <section class="skills" id="skills">
         <div class="container">
-          <h2 class="main-title">Skills</h2>
+          <h2 class="main-title" data-i18n="skills">Skills</h2>
           <div class="skills__items">
             <div class="skills__item">
               <h3 class="skills__item-title" data-i18n="skill-title-1">
@@ -126,7 +126,7 @@
 
       <section class="portfolio" id="portfolio">
         <div class="container">
-          <h2 class="main-title">Portfolio</h2>
+          <h2 class="main-title" data-i18n="portfolio">Portfolio</h2>
 
           <div class="portfolio__buttons-container">
             <button
@@ -197,7 +197,7 @@
 
       <section class="video" id="video">
         <div class="container video-container">
-          <h2 class="main-title">Video</h2>
+          <h2 class="main-title" data-i18n="video">Video</h2>
 
           <div class="video__player">
             <div class="video__player-play icon"></div>
@@ -209,7 +209,7 @@
 
       <section class="price" id="price">
         <div class="container">
-          <h2 class="main-title">Price</h2>
+          <h2 class="main-title" data-i18n="price">Price</h2>
 
           <div class="price__cards">
             <div class="price__card">
@@ -322,8 +322,17 @@
             </h2>
             <form action="submit" method="post" class="submit-form">
               <input type="email" name="email-address" placeholder="E-mail" />
-              <input type="tel" name="phone-number" placeholder="Phone" />
-              <textarea name="comment" placeholder="Message"></textarea>
+              <input
+                type="tel"
+                name="phone-number"
+                placeholder="Phone"
+                data-i18n="phone"
+              />
+              <textarea
+                name="comment"
+                placeholder="Message"
+                data-i18n="message"
+              ></textarea>
               <button
                 class="btn submit-form__btn golden"
                 data-i18n="send-message"
