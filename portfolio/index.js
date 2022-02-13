@@ -74,5 +74,7 @@ function changeClassActive(e) {
   }
 }
 
-portfolioButtons.addEventListener('click', test);
-languageBar.addEventListener('click', test);
+portfolioButtons.addEventListener('click', changeClassActive);
+languageBar.addEventListener('click', changeClassActive);
+
+//

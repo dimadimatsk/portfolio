@@ -181,6 +181,7 @@ a:active {
 
 .language__item.active-btn {
   color: var(--gold);
+  font-weight: bold;
 }
 
 .language__item:last-child {
