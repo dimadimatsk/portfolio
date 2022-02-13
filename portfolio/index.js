@@ -55,3 +55,24 @@ function preloadImages() {
 }
 
 preloadImages();
+
+// active button function
+
+const buttonsList = document.querySelectorAll('button');
+const languageBar = document.querySelector('.language__list');
+const languageBarItems = document.querySelectorAll('.language__item');
+
+function changeClassActive(e) {
+  if (e.target.classList.contains('language__item')) {
+    languageBarItems.forEach((item) => item.classList.remove('active-btn'));
+    e.target.classList.add('active-btn');
+  }
+
+  if (e.target.classList.contains('portfolio__button')) {
+    buttonsList.forEach((item) => item.classList.remove('active-btn'));
+    e.target.classList.add('active-btn');
+  }
+}
+
+portfolioButtons.addEventListener('click', test);
+languageBar.addEventListener('click', test);

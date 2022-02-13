@@ -179,11 +179,12 @@ a:active {
   margin-right: 9px;
 }
 
-.language__item:first-child {
+.language__item.active-btn {
   color: var(--gold);
 }
 
 .language__item:last-child {
+  margin-left: 9px;
   margin-right: 0px;
 }
 
@@ -634,6 +635,14 @@ textarea {
   flex-direction: column;
   padding-top: 134px;
   padding-left: 127px;
+}
+
+/* active button for js */
+
+.portfolio__button.active-btn {
+  background-color: var(--gold);
+  color: var(--bg-color);
+  border: 2px solid var(--gold);
 }
 
 /* media */
