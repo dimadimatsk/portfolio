@@ -660,6 +660,10 @@ footer {
 
 /* change background */
 
+.header__nav.active-theme {
+  background-color: transparent;
+}
+
 .active-theme {
   background: var(--white);
   color: var(--bg-color);
@@ -682,13 +686,20 @@ footer {
   margin-left: 30px;
 }
 
-.header__nav.active.active-theme {
-  background-color: var(--white);
-  color: var(--bg-color);
+.nav__list-link.active-theme {
+  background: transparent;
+  text-decoration: none;
+  color: var(--white);
+  font-size: var(--font2);
+  font-weight: normal;
+  line-height: 250%;
+  transition: 0.3s;
 }
 
-.nav__list-link.active-theme {
-  color: var(--bg-color);
+.nav__list-link.active-theme:hover,
+.nav__list-link.active-theme:focus,
+.nav__list-link.active-theme:active {
+  color: var(--gold);
 }
 
 .burger div.active-theme {
@@ -698,6 +709,15 @@ footer {
 /* media */
 
 @media (max-width: 768px) {
+  .header__nav.active.active-theme {
+    background-color: var(--white);
+    color: var(--bg-color);
+  }
+
+  .nav__list-link.active-theme {
+    color: var(--bg-color);
+  }
+  
   .container {
     max-width: 768px;
     margin: 0 auto;

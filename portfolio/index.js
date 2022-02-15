@@ -201,12 +201,48 @@ const toggleButton = document.querySelector('.header__toggle-icon');
 const navItemsLink = document.querySelectorAll('.nav__list-link');
 const closeBurger = document.querySelectorAll('.burger div');
 
+let currentTheme = 'dark';
+
 function toggleTheme() {
   body.classList.toggle('active-theme');
   nav.classList.toggle('active-theme');
   changeColorItems.forEach((item) => item.classList.toggle('active-theme'));
   portfolioButtonsNode.forEach((item) => item.classList.toggle('active-theme'));
   navItemsLink.forEach((item) => item.classList.toggle('active-theme'));
+  body.classList.contains('active-theme')
+    ? (currentTheme = 'light')
+    : (currentTheme = 'dark');
 }
 
 toggleButton.addEventListener('click', toggleTheme);
+
+// local storage
+
+function setLocalStorage() {
+  localStorage.setItem('lang', currentLang);
+  localStorage.setItem('theme', currentTheme);
+}
+window.addEventListener('beforeunload', setLocalStorage);
+
+function getLocalStorage() {
+  if (localStorage.getItem('lang')) {
+    currentLang = localStorage.getItem('lang');
+    getTranslate(currentLang);
+  }
+  if (currentLang === 'ru') {
+    document.querySelector("[data-lang='ru']").classList.add('active-btn');
+  } else {
+    document.querySelector("[data-lang='en']").classList.add('active-btn');
+  }
+
+  if (localStorage.getItem('theme')) {
+    currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark' && body.classList.contains('active-theme')) {
+      toggleTheme();
+    }
+    if (currentTheme === 'light' && !body.classList.contains('active-theme')) {
+      toggleTheme();
+    }
+  }
+}
+window.addEventListener('load', getLocalStorage);
