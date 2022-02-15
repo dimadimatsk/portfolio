@@ -104,6 +104,9 @@ function openMenu() {
   burgerBtn.classList.toggle('active');
   nav.classList.toggle('active');
   navList.classList.toggle('active');
+  if (body.classList.contains('active-theme')) {
+    closeBurger.forEach((item) => item.classList.toggle('active-theme'));
+  } // close color change
 }
 
 burgerBtn.addEventListener('click', openMenu);
@@ -188,3 +191,22 @@ function getTranslate(lang) {
     }
   }
 }
+
+// change color
+
+const changeColorItems = document.querySelectorAll('.main-title');
+const body = document.querySelector('body');
+const portfolioButtonsNode = document.querySelectorAll('.portfolio__button');
+const toggleButton = document.querySelector('.header__toggle-icon');
+const navItemsLink = document.querySelectorAll('.nav__list-link');
+const closeBurger = document.querySelectorAll('.burger div');
+
+function toggleTheme() {
+  body.classList.toggle('active-theme');
+  nav.classList.toggle('active-theme');
+  changeColorItems.forEach((item) => item.classList.toggle('active-theme'));
+  portfolioButtonsNode.forEach((item) => item.classList.toggle('active-theme'));
+  navItemsLink.forEach((item) => item.classList.toggle('active-theme'));
+}
+
+toggleButton.addEventListener('click', toggleTheme);

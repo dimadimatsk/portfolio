@@ -173,6 +173,7 @@ a:active {
 .language__list {
   display: flex;
   flex-wrap: wrap;
+  color: var(--white);
 }
 
 .language__item {
@@ -213,12 +214,14 @@ a:active {
   font-weight: bold;
   font-size: 60px;
   line-height: 200%;
+  color: var(--white);
 }
 
 .hero__subtitle {
   max-width: 470px;
   line-height: 200%;
   margin-bottom: 25px;
+  color: var(--white);
 }
 
 .hero__btn {
@@ -553,6 +556,10 @@ textarea {
 
 /* */
 
+footer {
+  background: var(--bg-color);
+}
+
 .footer__container {
   margin: 50px 0px;
   display: flex;
@@ -589,6 +596,10 @@ textarea {
   line-height: 250%;
 }
 
+.footer__symbol {
+  color: var(--white);
+}
+
 .burger {
   display: none;
   flex-direction: column;
@@ -620,7 +631,7 @@ textarea {
 }
 
 .header__nav.active {
-  background-color: black;
+  background-color: var(--bg-color);
   z-index: 15;
   flex-direction: column;
   position: absolute;
@@ -645,6 +656,43 @@ textarea {
   background-color: var(--gold);
   color: var(--bg-color);
   border: 2px solid var(--gold);
+}
+
+/* change background */
+
+.active-theme {
+  background: var(--white);
+  color: var(--bg-color);
+}
+
+.portfolio__button.active-theme.active-btn {
+  color: var(--white);
+}
+
+.portfolio__button.active-theme:hover {
+  background: var(--gold);
+}
+
+.main-title.active-theme::before,
+.main-title.active-theme::after {
+  border: 1px solid var(--bg-color);
+}
+
+.header__toggle-icon {
+  margin-left: 30px;
+}
+
+.header__nav.active.active-theme {
+  background-color: var(--white);
+  color: var(--bg-color);
+}
+
+.nav__list-link.active-theme {
+  color: var(--bg-color);
+}
+
+.burger div.active-theme {
+  background-color: var(--bg-color);
 }
 
 /* media */
@@ -812,6 +860,10 @@ textarea {
 
   .language__item:last-child {
     margin-right: 20px;
+  }
+
+  .header__toggle-icon {
+    margin-right: 30px;
   }
 }
 
