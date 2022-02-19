@@ -246,3 +246,74 @@ function getLocalStorage() {
   }
 }
 window.addEventListener('load', getLocalStorage);
+
+// video player
+
+const player = document.querySelector('.video__player');
+const video = player.querySelector('.viewer');
+const playButton = player.querySelector('.play');
+const volumeSlider = player.querySelector('.volume');
+const progressSlider = player.querySelector('.progress');
+const bigPlayButton = player.querySelector('.video__player-play');
+const posterPic = player.querySelector('.poster');
+
+function togglePlay() {
+  if (video.paused) {
+    bigPlayButton.classList.add('play');
+    posterPic.style.display = 'none';
+    video.play();
+  } else {
+    video.pause();
+    bigPlayButton.classList.remove('play');
+  }
+}
+
+function handleRangeUpdate() {
+  video[this.name] = this.value;
+  this.style.background = `linear-gradient(
+    to right,
+    #bdae82 0%,
+    #bdae82 ${this.value * 100}%,
+    #c8c8c8 ${this.value * 100}%,
+    #c8c8c8 40%
+  )`;
+}
+
+function updateButton() {
+  playButton.classList.toggle('pause');
+}
+
+function handleProgress() {
+  const percent = video.currentTime / video.duration;
+  progressSlider.value = percent;
+  progressSlider.style.background = `linear-gradient(
+    to right,
+    #bdae82 0%,
+    #bdae82 ${progressSlider.value * 100}%,
+    #c8c8c8 ${progressSlider.value * 100}%,
+    #c8c8c8 100%
+  )`;
+  if (video.currentTime === video.duration) {
+    bigPlayButton.classList.remove('play');
+  }
+}
+
+function scrub(e) {
+  const scrubTime = (e.offsetX / progressSlider.offsetWidth) * video.duration;
+  video.currentTime = scrubTime;
+}
+
+let mousedown = false;
+
+bigPlayButton.addEventListener('click', togglePlay);
+video.addEventListener('click', togglePlay);
+playButton.addEventListener('click', togglePlay);
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
+volumeSlider.addEventListener('change', handleRangeUpdate);
+volumeSlider.addEventListener('mousemove', handleRangeUpdate);
+video.addEventListener('timeupdate', handleProgress);
+progressSlider.addEventListener('click', scrub);
+progressSlider.addEventListener('mousemove', (e) => mousedown && scrub(e));
+progressSlider.addEventListener('mousedown', () => (mousedown = true));
+progressSlider.addEventListener('mouseup', () => (mousedown = false));

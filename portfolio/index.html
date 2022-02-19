@@ -205,7 +205,31 @@
           <h2 class="main-title" data-i18n="video">Video</h2>
 
           <div class="video__player">
+            <div class="poster"></div>
+            <video src="./assets/video/video.mp4" class="viewer"></video>
             <div class="video__player-play icon"></div>
+            <div class="controls">
+              <div class="play-button play icon"></div>
+              <input
+                name="progress"
+                type="range"
+                value="0"
+                min="0"
+                max="1"
+                step="0.05"
+                class="progress"
+              />
+              <div class="play-button vol icon"></div>
+              <input
+                name="volume"
+                type="range"
+                value="0.5"
+                min="0"
+                max="1"
+                step="0.05"
+                class="volume"
+              />
+            </div>
           </div>
         </div>
       </section>
